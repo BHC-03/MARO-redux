@@ -1,0 +1,26 @@
+export const registerComponentAnimation = {
+    hidden:{
+        opacity:0,
+        x:-100
+    },
+    show:{
+        opacity:1,
+        x:0,
+        transition:{
+            duration:0.3,
+            ease:'linear',
+            x:{
+                type:"spring",
+                stiffness:200
+            }
+        }
+    },
+    exit:{
+        opacity:0,
+        x:-100,
+        transition:{
+            duration:0.3,
+            ease:'easeOut'
+        }
+    }
+}

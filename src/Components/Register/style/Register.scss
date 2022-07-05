@@ -1,0 +1,85 @@
+@import '../../../sass/Parents';
+
+.pageBody{
+    height: 100vh;
+    width: 100%;
+    background-color: $primarycolor;
+    overflow: hidden;
+    .textContainer{
+        position: absolute;
+        right: 250px;
+        width: 600px;
+        height: 600px;
+        top:24%;
+        h1{
+            font-size: 5rem;
+            color: #EEF0F3;
+            span{
+                color: $secondarycolor;
+            }
+        }
+        h2{
+            font-size: 4rem;
+            color: #EEF0F3;
+            letter-spacing: 5px;
+            text-transform: capitalize;
+            margin-top: 10px;
+        }
+        h3{
+            font-size: 3rem;
+            color: #EEF0F3;
+            margin-top: 10px;
+        }
+
+    }
+}
+.registerContainer{
+    height: 65%;
+    width: 45%;
+    position: absolute;
+    top: 20%;
+    left: 100px ;
+    background-color: #EEF0F3;
+    box-shadow: 6px 6px 15px 0px rgba(2, 13, 165, 0.747);
+    overflow: hidden;
+    .registerInputContainer{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 200px;
+        width: 50%;
+        margin-left: 40px;
+        margin-top: 100px;
+        .input{
+            border: none;
+            outline: none;
+            height: 40px;
+            padding-left: 5px;
+            font-size: 1.1rem;
+            box-shadow: 5px 3px 10px 0px rgba(0, 0, 0, 0.336);
+        }
+        
+    }
+}
+.hasAccount{
+    font-size: 15px;
+    font-weight: bolder;
+    margin-left:38px;
+    position: relative;
+    top: -23px;
+    width: 250px;
+    span{
+        text-decoration: underline;
+        color: rgb(54, 54, 241);
+        cursor: pointer;
+    }
+
+}
+.btn{
+    @extend %button;
+    width:150px;
+    position: relative;
+    right: -322px;
+    margin-top: 30px;
+   
+}
