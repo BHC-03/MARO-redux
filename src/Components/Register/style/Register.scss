@@ -5,6 +5,7 @@
     width: 100%;
     background-color: $primarycolor;
     overflow: hidden;
+    
     .textContainer{
         position: absolute;
         right: 250px;
@@ -32,6 +33,7 @@
         }
 
     }
+    @import './lapTopStiyling';
 }
 .registerContainer{
     height: 65%;
@@ -60,7 +62,9 @@
         }
         
     }
-}
+    
+};
+
 .hasAccount{
     font-size: 15px;
     font-weight: bolder;
@@ -83,3 +87,4 @@
     margin-top: 30px;
    
 }
+

@@ -11,8 +11,8 @@ const StartUp:React.FC = ()=>{
                 <h3>Log in into your account and get started</h3>
             </div>
             <div className="buttonsContainer">
-                <div onClick={()=>redirect('/login')} className="loginDirectBtn StartUpButton">LOGIN</div>
-                <div onClick={()=>redirect('/register')} className="registerDirectBtn StartUpButton">REGISTER</div>
+                <div onClick={()=>redirect('/accounts/login')} className="loginDirectBtn StartUpButton">LOGIN</div>
+                <div onClick={()=>redirect('/accounts/register')} className="registerDirectBtn StartUpButton">REGISTER</div>
             </div>
         </div>  
     )

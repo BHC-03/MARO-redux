@@ -1,5 +1,5 @@
 .btn {
-  background-color: rgb(241, 181, 67);
+  background-color: #f1b543;
   height: 30px;
   width: 100px;
   padding: 2px 10px;
@@ -7,25 +7,32 @@
   font-size: 1.1rem;
   font-weight: bold;
   color: #f3f3f3;
+  -webkit-transition: 0.1s ease all;
   transition: 0.1s ease all;
   text-align: center;
   cursor: pointer;
   overflow: hidden;
 }
+
 .btn:hover {
-  transform: scale(1.07);
+  -webkit-transform: scale(1.07);
+          transform: scale(1.07);
 }
+
 .btn:active {
-  transform: scale(0.95);
-  transform: translate(2%, 2%);
+  -webkit-transform: scale(0.95);
+          transform: scale(0.95);
+  -webkit-transform: translate(2%, 2%);
+          transform: translate(2%, 2%);
 }
 
 .pageBody {
   height: 100vh;
   width: 100%;
-  background-color: rgb(97, 97, 245);
+  background-color: #6161f5;
   overflow: hidden;
 }
+
 .pageBody .textContainer {
   position: absolute;
   right: 250px;
@@ -33,13 +40,16 @@
   height: 600px;
   top: 24%;
 }
+
 .pageBody .textContainer h1 {
   font-size: 5rem;
   color: #EEF0F3;
 }
+
 .pageBody .textContainer h1 span {
-  color: rgb(241, 181, 67);
+  color: #f1b543;
 }
+
 .pageBody .textContainer h2 {
   font-size: 4rem;
   color: #EEF0F3;
@@ -47,10 +57,19 @@
   text-transform: capitalize;
   margin-top: 10px;
 }
+
 .pageBody .textContainer h3 {
   font-size: 3rem;
   color: #EEF0F3;
   margin-top: 10px;
+}
+
+@media (max-width: 1540px) {
+  .pageBody .textContainer {
+    height: 500px;
+    right: 80px;
+    color: black;
+  }
 }
 
 .registerContainer {
@@ -60,25 +79,36 @@
   top: 20%;
   left: 100px;
   background-color: #EEF0F3;
-  box-shadow: 6px 6px 15px 0px rgba(2, 13, 165, 0.747);
+  -webkit-box-shadow: 6px 6px 15px 0px rgba(2, 13, 165, 0.747);
+          box-shadow: 6px 6px 15px 0px rgba(2, 13, 165, 0.747);
   overflow: hidden;
 }
+
 .registerContainer .registerInputContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   height: 200px;
   width: 50%;
   margin-left: 40px;
   margin-top: 100px;
 }
+
 .registerContainer .registerInputContainer .input {
   border: none;
   outline: none;
   height: 40px;
   padding-left: 5px;
   font-size: 1.1rem;
-  box-shadow: 5px 3px 10px 0px rgba(0, 0, 0, 0.336);
+  -webkit-box-shadow: 5px 3px 10px 0px rgba(0, 0, 0, 0.336);
+          box-shadow: 5px 3px 10px 0px rgba(0, 0, 0, 0.336);
 }
 
 .hasAccount {
@@ -89,9 +119,10 @@
   top: -23px;
   width: 250px;
 }
+
 .hasAccount span {
   text-decoration: underline;
-  color: rgb(54, 54, 241);
+  color: #3636f1;
   cursor: pointer;
 }
 
@@ -100,4 +131,5 @@
   position: relative;
   right: -322px;
   margin-top: 30px;
-}/*# sourceMappingURL=Register.css.map */
+}
+/*# sourceMappingURL=Register.css.map */
