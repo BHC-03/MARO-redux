@@ -1,0 +1,54 @@
+@import '../../../sass/Parents';
+
+.startUpBodyPage{
+    height: 100vh;
+    width:100%;
+    background-color: $primarycolor;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.textContainerStartUp{
+    position: relative;
+    top: -15%;
+    text-align: center;
+    pointer-events: none;
+    h1{
+        font-size: 7rem;
+        color: $white;
+        text-shadow:5px 5px 10px black ;
+        span{
+            color:$secondarycolor;
+        }
+    };
+    h2{
+        font-size: 3rem;
+        margin-top: 20px;
+        color:$white;
+        text-shadow:4px 3px 10px black ;
+    };
+    h3{
+        font-size: 2rem;
+        color:$white;
+        margin-top: 30px;
+        text-shadow:2px 5px 10px black ;
+
+    }
+}
+.buttonsContainer{
+    width: 350px;
+    display: flex;
+    justify-content: space-between;
+}
+.StartUpButton{
+    @extend %button;
+    height: 60px;
+    width: 150px;
+    display: grid;
+    align-content: center;
+    box-shadow: 5px 7px 10px 0px rgba(0, 0, 0, 0.404);
+}
+.loginDirectBtn{
+    background-color: lighten($primarycolor,15%);
+}

@@ -1,0 +1,43 @@
+@import '../../../sass/Parents';
+.loginBodyPage{
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    background-color: $primarycolor;
+}
+.inputContainer{
+    box-shadow: 6px 6px 15px 0px rgba(2, 13, 165, 0.747);
+    background-color: $white;
+    height: 600px;
+    width: 20%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: flex;
+    flex-direction: column;
+    border: black solid 1px;
+    padding-top: 250px;
+    align-items: center;
+    .inputfield{
+        width: 80%;
+        height: 40px;
+        padding-left: 5px;
+        font-size: 1.2rem;
+        box-shadow: 5px 3px 10px 0px rgba(0, 0, 0, 0.336);
+        outline: none;
+        border: none;
+    }
+    .button{
+        @extend %button;
+        width: 76%;
+        height: 30px;
+        background-color: $secondarycolor;
+        font-size: 1.2rem;
+        border:none;
+        color:white;
+        font-weight: bold;
+        cursor: pointer;
+        margin-top: 15px;
+    }
+}
