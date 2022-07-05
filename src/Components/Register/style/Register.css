@@ -52,6 +52,13 @@
   color: #EEF0F3;
   margin-top: 10px;
 }
+@media (max-width: 1540px) {
+  .pageBody .textContainer {
+    height: 500px;
+    right: 80px;
+    color: black;
+  }
+}
 
 .registerContainer {
   height: 65%;
