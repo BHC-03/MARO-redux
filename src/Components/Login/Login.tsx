@@ -6,9 +6,8 @@ import {useAppSelector,useAppDispatch} from '../../Hooks/ReduxHooks';
 import { motion } from 'framer-motion';
 import { loginContainerAnimation , loginTextContainerAnimatoin,loginTextAnimation} from '../../Animations';
 import useRedirect from '../../Hooks/useRedirect';
-import useIsLogged from '../../Hooks/useIsLogged';
 import './style/login.css';
-import { Navigate } from 'react-router-dom';
+
 
 const Login:React.FC = ()=>{
     const [info,setInfo] = useState<IuserInfo>({
@@ -19,7 +18,7 @@ const Login:React.FC = ()=>{
     const [errors,setErrors] = useForm(info);
     const [good,setGood] = useState<boolean>(true);
     const redirect = useRedirect();
-    const islogged = useIsLogged();
+    
     
     
     const {logIn} = useAppDispatch();
@@ -30,9 +29,7 @@ const Login:React.FC = ()=>{
             setErrors({email:'invalid email',password:'invalid Password',username:''})
         }
     },[currentUserData])
-    if(islogged){
-        return <Navigate to={'/mainpage'} replace={true}/>
-    }
+    
     const emailHandler= (e:React.ChangeEvent<HTMLInputElement>):void =>{
         setInfo(oldInfo=> ({...oldInfo,email:e.target.value}))
     };
@@ -53,7 +50,7 @@ const Login:React.FC = ()=>{
     
     return(
         <motion.div className='loginBody'>
-            {!islogged &&<>
+          
             <motion.div variants={loginContainerAnimation} initial="hidden" animate='show' exit="exit"  className="inputContainer">
                 <input placeholder='ENTER YOUR EMAIL ADDRESS' className="inputfield" type="text" value={info.email} onChange={emailHandler} />
                 {!good && errors.email && (<p className="errorMessage">{errors?.email}</p>) }
@@ -74,7 +71,7 @@ const Login:React.FC = ()=>{
                 <motion.h3 variants={loginTextAnimation}>
                     Account and catch up with your friend!
                 </motion.h3>
-            </motion.div></> }
+            </motion.div>
         </motion.div>
     )
 }

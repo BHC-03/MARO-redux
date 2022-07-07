@@ -4,5 +4,7 @@ export enum ActionTypes {
     LOG_OUT = 'logout',
     REGISTER = 'register',
     SESSION_LOG_IN = 'sessionlogin',
-    IS_LOGGED = 'islogged'
+    IS_LOGGED = 'islogged',
+    PENDING = 'pending',
+    PENDING_DONE = 'pendingdone'
 }

@@ -8,9 +8,7 @@ import { ActionCreators } from "../../Redux/actionCreators";
 import {useAppSelector} from "../../Hooks/ReduxHooks";
 import { motion } from "framer-motion";
 import { registerComponentAnimation,registerTextAnimation ,registerTextContainerAnimation} from "../../Animations";
-import useIsLogged from "../../Hooks/useIsLogged";
 import useRedirect from "../../Hooks/useRedirect";
-import { Navigate } from "react-router-dom";
 const Register:React.FC = ()=>{
     const [info,setInfo] = useState<IuserInfo>({
         email:'',
@@ -23,7 +21,6 @@ const Register:React.FC = ()=>{
     const {register} = bindActionCreators(ActionCreators,dispatch);
     const userData = useAppSelector(state=>state.user);
     const redirect = useRedirect();
-    const islogged = useIsLogged();
     const emailHandler = (e:React.ChangeEvent<HTMLInputElement>)=>{
         setInfo(oldinfo=>({...oldinfo,email:e.target.value}));
     }
@@ -45,9 +42,6 @@ const Register:React.FC = ()=>{
         }
         register(info.email,info.password,info.username);
         
-    }
-    if(islogged){
-        return <Navigate  to={'/mainpage/'} replace={true}/>
     }
     return (
         <>
