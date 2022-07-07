@@ -34,3 +34,8 @@ export const register = (email:string,password:string,username:string)=>(dispatc
         dispatch({type:ActionTypes.REGISTER,payload:{email:user!.email!,username:user!.displayName!,token,photo_url:'',id:user?.uid!}});
     })
 }
+
+export const sessionLogin = (email:string,token:string,id:string,photo_url:string,username:string)=>(dispatch:Dispatch<userActionType>)=>{
+    dispatch({type:ActionTypes.SESSION_LOG_IN,payload:{username,email,token,id,photo_url}})
+}
+

@@ -36,6 +36,17 @@ interface successLoginResult{
     photo_url:string,
     err?:unknown
 }
+interface sessionLoginActionType {
+    type:ActionTypes.SESSION_LOG_IN,
+    payload:{
+        email:string,
+        username:string,
+        photo_url:string,
+        token:string,
+        id:string
+    }
+}
+
 
  export type loginresults  = successLoginResult;
- export type userActionType = logInActionType | logOutActionType | failedLoginActionType | registerActionType;
+ export type userActionType = logInActionType | logOutActionType | failedLoginActionType | registerActionType | sessionLoginActionType;

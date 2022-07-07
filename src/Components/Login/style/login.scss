@@ -41,3 +41,18 @@
         margin-top: 15px;
     }
 }
+body .loginBody .loginTextContainer{
+    h2{
+        font-size: 4rem;
+    }
+}
+.dontHaveAccount{
+    margin-top: auto;
+    margin-bottom: 20px;
+    font-size: 20px;
+    span{
+        text-decoration: underline;
+        cursor: pointer;
+        color: rgb(42, 42, 252);
+    }
+}
