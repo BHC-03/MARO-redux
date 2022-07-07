@@ -1,0 +1,11 @@
+@import '../../../sass/Parents';
+
+.mainPageContentContainer{
+    width: 70%;
+    min-height: 100vh;
+    background-color: lighten($primarycolor,7%);
+}
+.mainPageBody{
+    display: flex;
+    justify-content: center;
+}

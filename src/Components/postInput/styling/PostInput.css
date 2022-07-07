@@ -1,0 +1,67 @@
+.postSubmitButton {
+  background-color: rgb(241, 181, 67);
+  height: 30px;
+  width: 100px;
+  padding: 2px 10px;
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #f3f3f3;
+  transition: 0.1s ease all;
+  text-align: center;
+  cursor: pointer;
+  overflow: hidden;
+}
+.postSubmitButton:hover {
+  transform: scale(1.07);
+}
+.postSubmitButton:active {
+  transform: scale(0.95);
+  transform: translate(2%, 2%);
+}
+
+.postInputContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 40px;
+}
+
+.postInputArea {
+  width: 550px;
+  height: 150px;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  font-size: 2rem;
+  border: none;
+  resize: none;
+  outline: none;
+}
+.postInputArea:focus {
+  outline: none;
+}
+
+.textAreaLabel {
+  color: #EEF0F3;
+  font-size: 1.5rem;
+  font-weight: bolder;
+  margin-right: 680px;
+  margin-bottom: 10px;
+}
+
+.controlls {
+  background-color: white;
+  width: 70%;
+  height: 50px;
+  align-self: center;
+  border: none;
+  outline: none;
+  position: relative;
+}
+
+.postSubmitButton {
+  position: absolute;
+  width: 150px;
+  right: 10px;
+  top: 14px;
+}/*# sourceMappingURL=PostInput.css.map */

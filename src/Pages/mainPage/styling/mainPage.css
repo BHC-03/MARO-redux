@@ -1,0 +1,10 @@
+.mainPageContentContainer {
+  width: 70%;
+  min-height: 100vh;
+  background-color: #8383f7;
+}
+
+.mainPageBody {
+  display: flex;
+  justify-content: center;
+}/*# sourceMappingURL=mainPage.css.map */
